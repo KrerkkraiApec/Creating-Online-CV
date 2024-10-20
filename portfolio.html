@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krerkkrai Chaithep | Portfolio | Portfolio</title>
+    <link rel="stylesheet" href="Style.css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--light-color);
+            background-image: url(" ");
+            color: var(--secondary-color);
+            display: flex;
+        }
+
+        /* สไตล์สำหรับแถบด้านข้าง */
+        .sidebar {
+            background-color: var(--primary-color);
+            width: 200px;
+            height: 100vh; /* ความสูงเต็มหน้าจอ */
+            padding: 30px;
+            position: fixed; /* อยู่ในตำแหน่งที่แน่นอน */
+            transition: all 0.3s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+            overflow-y: auto; /* สร้างเลื่อนเมื่อมีเนื้อหามาก */
+        }
+        .sidebar:hover {
+            width: 215px; /* ขยายเมื่อชี้ */
+        }
+        .sidebar img{
+            width: 100%;
+            height: auto;
+            border-radius: 50px;
+            border: 7px solid  #24295583;
+            transition: transform 0.3s ease; /* เอฟเฟกต์การเคลื่อนไหว */
+        }
+        .sidebar img:hover {
+            transform: scale(1.05); /* ขยายภาพเมื่อชี้ */
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 35px 0;
+        }
+
+        .sidebar ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 30px;
+            display: block; /* ให้มีความกว้างเต็ม */
+            padding: 7px 10px;
+            border-radius: 10px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: rgba(109, 109, 109, 0.288);
+            transition: background-color 0.7s ease;
+            transform: translateY(-5px);
+            transition: translateY 0.7s ease;
+        }
+
+        /* สไตล์สำหรับเนื้อหา */
+        .content {
+            margin-left: 200px; /* ปรับให้เนื้อหาห่างจากแถบด้านข้าง */
+            padding: 50px;
+            flex: 1; /* ให้เนื้อหาขยายเต็มพื้นที่ */
+        }
+
+        .content h1 {
+            font-size: 100px;
+            margin-bottom: 50px;
+            line-height: 1.3;
+            transition: transform 0.3s ease;
+        }
+        .content h1:hover{
+            transform: scale(1.05);
+        }
+         /* Portfolio Grid */
+         .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-item h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-item p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* ทำให้ responsive สำหรับมือถือ */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* เปลี่ยนให้แถบด้านข้างและเนื้อหาอยู่ในแนวตั้ง */
+            }
+
+            .sidebar {
+                width: 100%; /* ให้แถบด้านข้างเต็มหน้าจอ */
+                height: auto; /* ความสูงอัตโนมัติ */
+                position: relative; /* ตำแหน่งที่สัมพันธ์กับเนื้อหา */
+            }
+
+            .content {
+                margin-left: 0; /* ยกเลิกระยะห่าง */
+                padding: 20px; /* ปรับ padding */
+            }
+
+            .sidebar h2, .sidebar ul li a {
+                text-align: center; /* จัดตำแหน่งให้กลาง */
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="img/S__8355885.jpg" alt="Krerkkrai Chaithep">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Portfolio</h1>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="img\652110219-1.png" alt="Project 1">
+                <img src="img\652110219-2.1.png" alt="Project 1">
+                <h3>The Village of Mystery</h3>
+                <p>เป็นแผนที่หมู่บ้านที่เต็มไปด้วยความลึกลับและผู้เล่นจะต้องมาแก้ Puzzle ต่างๆภายในแผนที่นี้เพื่อหนีออกไป</p>
+                <p>ซึ่งได้ใช้ Unreal Engine ในการสร้าง และมีชื่อว่า The Village of Mystery</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="img\School_4.jpg" alt="Project 2">
+                <img src="img\School_5.jpg" alt="Project 2">
+                <h3>The School</h3>
+                <p>เป็นแผนที่ภายในโรงเรียนและได้ทำการใช้ Unity ในการสร้างแผนที่นี่</p>
+                <p>เป็นงานสำหรับ Project Game ที่ใช้พื่นที่ในโรงเรียน</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="img\EchoesFromTheDark.png" alt="Project 3">
+                <h3>Echoes from The Dark</h3>
+                <p>เป็นเกมที่ได้ทำเองทั้งการ Design ตัวเกม </p>
+                <p>Design Level ต่างๆ ภายในเกม รวมไปถึงการทำ Blueprint class ต่างๆ ภายในตัวเกม</p>
+                <p>ซึ่งได้ทำการใช้ Unreal Engine ในการทำเกมนี้ทั้งหมด</p>
+                <p>และเกมนี้ได้แรงบันดาบใจมาจากเกมแนว First Person Horror & Puzzle Game หลายๆเกม เช่น Home Sweet Home, Araya</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krerkkrai Chaithep | Portfolio | Home</title>
+    <link rel="stylesheet" href="Style.css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--light-color);
+            background-image: url(" ");
+            color: var(--secondary-color);
+            display: flex;
+        }
+
+        /* สไตล์สำหรับแถบด้านข้าง */
+        .sidebar {
+            background-color: var(--primary-color);
+            width: 200px;
+            height: 100vh; /* ความสูงเต็มหน้าจอ */
+            padding: 30px;
+            position: fixed; /* อยู่ในตำแหน่งที่แน่นอน */
+            transition: all 0.3s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+            overflow-y: auto; /* สร้างเลื่อนเมื่อมีเนื้อหามาก */
+        }
+        .sidebar:hover {
+            width: 215px; /* ขยายเมื่อชี้ */
+        }
+        .sidebar img{
+            width: 100%;
+            height: auto;
+            border-radius: 50px;
+            border: 7px solid  #24295583;
+            transition: transform 0.3s ease; /* เอฟเฟกต์การเคลื่อนไหว */
+        }
+        .sidebar img:hover {
+            transform: scale(1.05); /* ขยายภาพเมื่อชี้ */
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 35px 0;
+        }
+
+        .sidebar ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 30px;
+            display: block; /* ให้มีความกว้างเต็ม */
+            padding: 7px 10px;
+            border-radius: 10px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: rgba(109, 109, 109, 0.288);
+            transition: background-color 0.7s ease;
+            transform: translateY(-5px);
+            transition: translateY 0.7s ease;
+        }
+
+        /* สไตล์สำหรับเนื้อหา */
+        .content {
+            margin-left: 200px; /* ปรับให้เนื้อหาห่างจากแถบด้านข้าง */
+            padding: 50px;
+            flex: 1; /* ให้เนื้อหาขยายเต็มพื้นที่ */
+            border-radius: 20px; /* มุมมน */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* เงา */
+        }
+
+        .content h1 {
+            font-size: 100px;
+            margin-bottom: 50px;
+            line-height: 1.3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* เงา */
+            transition: transform 0.3s ease;
+        }
+        .content h1:hover{
+            transform: scale(1.05);
+        }
+
+        .content h2 {
+            font-size: 50px;
+            margin: 50px 0 0 30px;
+            line-height: 1.4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* เงา */
+            transition: transform 0.3s ease;
+        }
+
+        .content h2:hover{
+            transform: scale(1.05);
+        }
+
+        .content h3{
+            font-size: 40px;
+            margin-top: 50px;
+            line-height: 1.5;
+            transition: transform 0.3s ease;
+        }
+
+        .content h3:hover{
+            transform: scale(1.05);
+        }
+        /* ทำให้ responsive สำหรับมือถือ */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* เปลี่ยนให้แถบด้านข้างและเนื้อหาอยู่ในแนวตั้ง */
+            }
+
+            .sidebar {
+                width: 100%; /* ให้แถบด้านข้างเต็มหน้าจอ */
+                height: auto; /* ความสูงอัตโนมัติ */
+                position: relative; /* ตำแหน่งที่สัมพันธ์กับเนื้อหา */
+            }
+
+            .content {
+                margin-left: 0; /* ยกเลิกระยะห่าง */
+                padding: 20px; /* ปรับ padding */
+            }
+
+            .sidebar h2, .sidebar ul li a {
+                text-align: center; /* จัดตำแหน่งให้กลาง */
+            }
+
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="img\S__8355885.jpg">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Krerkkrai Chaithep</h1>
+        <h2>Welcome To My Portfolio</h2>
+    </div>
+</body>
+</html>
